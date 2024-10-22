@@ -24,6 +24,10 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 vim.opt.signcolumn = 'yes'
 
 vim.opt.updatetime = 250
@@ -315,9 +319,9 @@ require('lazy').setup({
   {
     'iabdelkareem/csharp.nvim',
     dependencies = {
-      'williamboman/mason.nvim', -- Required, automatically installs omnisharp
+      'williamboman/mason.nvim',
       'mfussenegger/nvim-dap',
-      'Tastyep/structlog.nvim', -- Optional, but highly recommended for debugging
+      'Tastyep/structlog.nvim',
     },
     config = function()
       require('mason').setup() -- Mason setup must run before csharp, only if you want to use omnisharp
